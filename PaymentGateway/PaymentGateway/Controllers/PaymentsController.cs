@@ -20,7 +20,6 @@ namespace PaymentGateway.Controllers
     [Authorize]
     public class PaymentsController : ControllerBase
     {
-       // private IUserService _userService;
         private IPaymentService _paymentService;
         private readonly ILogger<PaymentsController> _logger;
         private readonly PaymentGatewayContext _context;

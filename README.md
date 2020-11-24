@@ -32,7 +32,8 @@
 - Move to a config file:
   - Log file path
   - Bank API address
-- Add more error handlings and write to log 
+- Add more error handlings and more write to log 
+- Improve authorization token
 - Add user registration endpoint
 - Add user input validation (such as: currency is an actual currency)
 

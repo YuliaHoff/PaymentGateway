@@ -22,3 +22,29 @@
 }`
 - Currently the database is in memory and initialized with hardcoded temp data
 - Calling the authenticate endpoint will result in a token that must be used in every subsequent request in the "Autorization" header
+
+### TODO list - things that would have been done if I had more time
+
+- Add many many more tests: 
+  - Test other functions of PaymentService and test other services
+  - Test other functions of PaymentController and test UserController
+- Connect to real database and replace the InMemory one that is used
+- Move to a config file:
+  - Log file path
+  - Bank API address
+- Add more error handlings and write to log 
+- Add user registration endpoint
+- Add user input validation (such as: currency is an actual currency)
+
+### Assumptions
+
+- Masking is done on a 16 chars credit number where first 6 and last 4 chars are not masked
+- The acquiring bank does not require authentication and identifies just by the user id (this assumption is only for simplicity since I don't know the authentication model the bank will eventually use)
+
+### Other notes
+
+- Accidentally read the spec as "retrieve details of a previously made payments" instead of "retrieve details of a previously made payment". Decided to leave it since I have already done it when I realized I actually only need to get 1. Also, it makes sense the merchant might want to get all of his payments to analyze his data.
+
+## Testing
+
+PaymentGateway solution contains 2 project: one is the API and the other tests the first project
